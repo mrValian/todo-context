@@ -1,0 +1,140 @@
+body {
+    background-color: gray;
+}
+
+.app {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: blueviolet;
+}
+
+.title {
+    color: white;
+    margin: 0 0 10px 0;
+}
+
+.findTitle {
+    margin: 0 0 10px 0;
+    color: white;
+}
+
+.task {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.taskId {
+    padding: 20px;
+    background: purple;
+    border-radius: 10px;
+}
+
+.taskDo {
+    padding: 20px;
+    background: purple;
+    border-radius: 10px;
+    flex: 1 1 auto;
+}
+
+.taskWrapBtn {
+	background: purple;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+    gap: 5px;
+}
+
+/* Модальный (фон) */
+.modal {
+    display: block;
+    /* Скрыто по умолчанию */
+    position: fixed;
+    /* Оставаться на месте */
+    z-index: 1;
+    /* Сидеть на вершине */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Полная ширина */
+    height: 100%;
+    /* Полная высота */
+    overflow: auto;
+    /* Включите прокрутку, если это необходимо */
+    background-color: rgb(0, 0, 0);
+    /* Цвет запасной вариант */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Черный с непрозрачностью */
+}
+
+/* Модальное содержание/коробка */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 15% сверху и по центру */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    /* Может быть больше или меньше, в зависимости от размера экрана */
+}
+
+/* Кнопка закрытия */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.addFormToDo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50%;
+}
+
+.wrapAddFormToDo {
+    display: flex;
+    justify-content: center;
+}
+
+.addFormToDoInfo {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Модальный (фон */
+
+.loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25px;
+    height: 25px;
+    border: 5px solid black;
+    border-radius: 50%;
+    border-left-color: transparent;
+    animation: loader 1s infinite;
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
